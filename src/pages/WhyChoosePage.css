@@ -1,0 +1,149 @@
+/* General Styles */
+.why-choose-page {
+    padding: 50px;
+    background-color: #fff8e1; /* Saffron-inspired background */
+    position: relative;
+    animation: fadeIn 1s ease-in;
+}
+
+/* Centered Content Styling */
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Heading Styling */
+.content-wrapper h2 {
+    font-size: 3em;
+    margin-bottom: 4%;
+    color: #ff5722; /* Saffron color */
+    text-shadow: 0 0 15px rgba(255, 87, 34, 0.7);
+}
+
+/* Introduction Section */
+.intro-section p {
+    font-size: 1.4em;
+    line-height: 1.8;
+    color: #4e342e;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Unique Selling Points Section */
+.usp-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.usp-item {
+    background: rgba(255, 204, 128, 0.2);
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    color: #4e342e;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    max-width: 250px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+/* Hover Effect with Trishul Animation */
+.usp-item.trishul-hover:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.usp-item.trishul-hover:hover::after {
+    content: '🔱'; /* Replace with the trishul icon path */
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    animation: rotateTrishul 1s infinite linear;
+}
+
+/* Visual Section */
+.visual-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.visual-item {
+    position: relative;
+    width: 30%;
+}
+
+.visual-item img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.visual-item img:hover {
+    transform: scale(1.05);
+}
+
+.visual-item .overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(255, 87, 34, 0.8);
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2em;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+}
+
+.visual-item:hover .overlay {
+    transform: translateY(0);
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Keyframes for Trishul Animation */
+@keyframes rotateTrishul {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-wrapper h2 {
+        font-size: 2.5em;
+    }
+
+    .usp-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .visual-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .visual-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}

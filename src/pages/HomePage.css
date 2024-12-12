@@ -1,0 +1,286 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-color: #fff8e1; /* Light saffron background */
+}
+
+/* Home Page Container */
+.home-container {
+    min-height: 100vh;
+    background-image: url('Assets/your-background-image.jpg');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    background-color: #ff9800; /* Saffron background color */
+    background-blur: rgba(255, 152, 0, 0.7); /* Blurred saffron background */
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 1000;
+    padding: 0 20px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(7px);
+    transition: transform 0.3s ease-in-out, backdrop-filter 0.3s ease;
+}
+
+.navbar.hidden {
+    transform: translateY(-100%);
+}
+
+.navbar-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: #d84315; /* Dark saffron color */
+    font-size: 1.3em;
+    margin-left: 30px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar-menu a:hover {
+    color: #fff;
+}
+
+.toggle-button {
+    display: none;
+    background: none;
+    border: none;
+    color: #d84315;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .navbar-menu {
+        flex-direction: column;
+        position: fixed;
+        top: 50px;
+        left: 0;
+        width: 30%;
+        height: calc(100% - 50px);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        padding-top: 10px;
+        z-index: 999;
+    }
+
+    .navbar-menu.show {
+        transform: translateX(0);
+    }
+
+    .toggle-button {
+        display: block;
+        z-index: 1001;
+    }
+
+    .navbar-menu a {
+        font-size: 1.2em;
+        margin-top: 10px;
+    }
+}
+
+/* Header Section */
+.header-content {
+    text-align: center;
+    margin-top: 150px;
+}
+
+.header-content .heading {
+    font-family: 'Monospace', Arial, sans-serif;
+    font-size: 50px;
+    color: #d84315; /* Dark saffron color */
+    margin-bottom: 100px;
+}
+
+.header-content .para {
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: 26px;
+    font-weight: 900;
+    color: #d84315;
+    margin-top: 7%;
+}
+
+/* Button Styles */
+.registerbutton {
+    padding: 10px 50px;
+    font-size: 1.5em;
+    color: #fff;
+    background-color: #d84315; /* Dark saffron color */
+    border: 2px solid #d84315;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.registerbutton:hover {
+    background-color: #bf360c; /* Slightly darker saffron */
+    transform: scale(1.05);
+}
+
+/* Gallery Section */
+.gallery-section {
+    padding: 50px 0;
+    background-color: #fff3e0; /* Light saffron background */
+    text-align: center;
+}
+
+.gallery-heading {
+    font-size: 30px;
+    font-family: Cursive;
+    margin-bottom: 30px;
+    color: #d84315;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 6px;
+}
+
+.gallery-item {
+    flex: 1 1 calc(25% - 20px);
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.gallery-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Styles */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #d84315; /* Dark saffron */
+    color: white;
+}
+
+.footer p {
+    font-size: 1.2em;
+}
+
+/* About Section */
+.about-section {
+    background-color: #fff3e0; /* Light saffron background */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.about-text h2 {
+    font-size: 2.5em;
+    color: #d84315;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.about-text p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+}
+
+.homebtn-about {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #d84315;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.homebtn-about:hover {
+    background-color: #bf360c;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #ffcc80; /* Softer saffron background */
+}
+
+.highlighted-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #d84315;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: "Handlee", cursive;
+    margin: 20px auto;
+    max-width: 80%;
+    text-align: center;
+}
+
+/* Card Styles */
+.card {
+    background-color: #ff9800;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+

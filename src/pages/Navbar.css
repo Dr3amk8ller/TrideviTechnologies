@@ -1,0 +1,120 @@
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: top 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px); /* Optional: add blur to background */
+}
+
+/* Navbar hidden when scrolling down */
+.navbar.hidden {
+    top: -60px;
+}
+
+/* Navbar Menu */
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+}
+
+.navbar-menu li {
+    cursor: pointer;
+    position: relative;
+    padding: 5px 0;
+}
+
+/* Navbar Links */
+.navbar-menu a {
+    text-decoration: none;
+    color: #fff; /* White text */
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar-menu a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #ff5c5c; /* Underline animation color */
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.navbar-menu a:hover {
+    color: #ff5c5c; /* Color change on hover */
+}
+
+.navbar-menu a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Sidebar Button */
+.toggle-button {
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.toggle-button:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+}
+
+/* Smooth Scroll Effect */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9); /* Darker background for mobile */
+        width: 200px;
+        padding: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar-menu li {
+        padding: 10px 0;
+    }
+
+    .toggle-button {
+        color: #fff;
+        font-size: 35px;
+    }
+
+    .toggle-button.open + .navbar-menu {
+        display: flex; /* Display menu when button is clicked */
+    }
+}

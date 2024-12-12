@@ -1,0 +1,168 @@
+/* General Styles for Services Section */
+.services-page {
+    padding: 40px;
+    background: linear-gradient(to bottom, #ffedd5, #f8f1e1); /* Soft saffron gradient */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Section Heading */
+.services-page h2 {
+    font-size: 2.8em;
+    color: #d84315; /* Deep saffron */
+    margin-bottom: 30px;
+    text-align: center;
+    text-shadow: 0 0 20px rgba(255, 204, 128, 0.8);
+    animation: fadeInHeading 1.2s ease-in-out;
+    position: relative;
+}
+
+.services-page h2:after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 5px;
+    background: #d84315;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: trishulLine 1.5s infinite alternate ease-in-out;
+}
+
+/* Carousel Container */
+.carousel-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1000px;
+    position: relative;
+    animation: fadeInContainer 1.5s ease-in-out;
+}
+
+/* Carousel Track */
+.carousel-track {
+    display: flex;
+    animation: rollLeft infinite 12s linear; /* Circular scroll */
+    will-change: transform;
+    animation-play-state: running; /* Default running state */
+}
+
+.carousel-item {
+    flex: 0 0 300px; /* Fixed item width */
+    margin: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.carousel-item:hover {
+    transform: scale(1.1) rotate(-2deg);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom, #ffe6c1, #fff);
+}
+
+.carousel-item:hover:before {
+    content: '🕉'; /* Hinduism symbol */
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 3em;
+    color: rgba(255, 99, 71, 0.3);
+    transform: rotate(-15deg);
+}
+
+/* Title */
+.carousel-item h3 {
+    font-size: 1.6em;
+    color: #d84315; /* Deep saffron */
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.carousel-item h3:before {
+    content: '🔱'; /* Trishul-inspired glyph */
+    position: absolute;
+    top: -10px;
+    left: -30px;
+    font-size: 1.2em;
+    color: #0a4570;
+}
+
+/* Description */
+.carousel-item p {
+    font-size: 0.95em;
+    color: #0a4570;
+    line-height: 1.6;
+}
+
+/* Animations */
+@keyframes rollLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes fadeInHeading {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes trishulLine {
+    0% {
+        width: 60px;
+    }
+    100% {
+        width: 90px;
+    }
+}
+
+@keyframes fadeInContainer {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .carousel-track {
+        flex-direction: column;
+        overflow-y: auto;
+        animation: rollTop infinite 12s linear;
+    }
+
+    .carousel-item {
+        flex: 1;
+    }
+}
+
+@keyframes rollTop {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}

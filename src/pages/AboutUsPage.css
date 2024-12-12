@@ -1,0 +1,187 @@
+/* General Styles for About Us Page */
+.about-us-page {
+    padding: 50px;
+    background-size: cover;
+    background-position: center;
+    background-color: #fff8e1; /* Light saffron background */
+    overflow: hidden;
+    position: relative;
+    animation: fadeIn 1s ease-in;
+}
+
+/* Centered Content Styling */
+.about-us-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    color: #d84315; /* Dark saffron for text */
+}
+
+/* Heading Styles */
+.about-us-content h2 {
+    font-size: 3em;
+    margin-bottom: 6%;
+    color: #d84315; /* Dark saffron color */
+    text-shadow: 0 0px 10px #fff8e1; /* Subtle glow effect */
+    font-family: 'Noto Sans', sans-serif; /* Modern and clean font */
+    font-weight: bold;
+}
+
+/* Floating Sections Styling */
+.floating-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 50px; /* Added padding to ensure content is visible before image */
+    border-radius: 10px;
+}
+
+.section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    color: #0a4570; /* Deep blue accent for text */
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    animation: slideUpDown 4s ease-in-out infinite alternate; /* Slower and more fluid animation */
+}
+
+/* Trishul Hover Effect (Subtle Trishul Glow) */
+.section:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Refined shadow for subtle lift */
+    z-index: 2;
+    animation: trishul-glow 1s ease-in-out infinite alternate; /* Glowing effect */
+}
+
+/* Trishul Symbol Animation */
+@keyframes trishul-glow {
+    0% {
+        box-shadow: 0 0 10px #d84315, 0 0 20px #ff5722, 0 0 30px #ff9800;
+    }
+    100% {
+        box-shadow: 0 0 20px #d84315, 0 0 25px #ff5722, 0 0 40px #ff9800;
+    }
+}
+
+/* Slide Up and Down Animation (Slower) */
+@keyframes slideUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-10px); /* Slight movement */
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(10px); /* Slight movement */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Section Text and Title Styles */
+.section h3 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #d84315; /* Dark saffron */
+    text-shadow: 0 0 5px #d84315;
+    font-family: 'Noto Serif', serif; /* Elegant serif font */
+    font-weight: normal; /* Softer font weight for readability */
+}
+
+.section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin: 15px 0;
+    color: #666; /* Slightly darker text */
+    font-family: 'Merriweather', serif;
+}
+
+/* Button Styling */
+.btn-about {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 15px;
+    background-color: #d84315; /* Dark saffron */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: 'Arial', sans-serif;
+}
+
+.btn-about:hover {
+    background-color: #bf360c; /* Slightly darker saffron */
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-us-content h2 {
+        font-size: 2.5em;
+        margin-bottom: 4%;
+    }
+
+    .floating-sections {
+        padding-bottom: 30px; /* Reduce padding for smaller screens */
+    }
+
+    .section {
+        padding: 20px;
+        font-size: 1em;
+    }
+
+    .section h3 {
+        font-size: 2em;
+    }
+
+    .btn-about {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-us-content h2 {
+        font-size: 1.8em;
+        margin-bottom: 3%;
+    }
+
+    .floating-sections {
+        padding-bottom: 20px; /* Further reduce padding for very small screens */
+    }
+
+    .section {
+        padding: 15px;
+        font-size: 0.9em;
+    }
+
+    .section h3 {
+        font-size: 1.8em;
+    }
+
+    .btn-about {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
+
+/* Keyframes for floating animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
