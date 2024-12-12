@@ -1,19 +1,19 @@
-/* Sidebar.css */
 .sidebarr {
     position: fixed;
     top: 0;
-    left: -160px; /* Start off-screen */
-    width: 160px;  /* Sidebar width */
+    left: -100%; /* Start completely off-screen */
+    width: 200px;
     height: 100%;
     background-color: #0a4570;
     color: #fff;
     transition: left 0.3s ease-in-out;
     z-index: 1000;
     overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3); /* Add subtle shadow */
 }
 
 .sidebarr.open {
-    left: 0; /* Slide in when open */
+    left: 0;
 }
 
 .sidebarr-menu {
@@ -23,19 +23,20 @@
 }
 
 .sidebarr-menu li {
-    margin: 30px 20px;
+    margin: 20px 10px;
     cursor: pointer;
 }
 
 .sidebarr-menu li:hover {
-    background-color: rgba(255, 255, 255, 0.1);  /* Add a hover effect */
-    padding-left: 10px;  /* Slight indentation for hover effect */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-left: 10px;
 }
 
 .sidebarr-menu a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
+    display: block;
 }
 
 .close-button {
@@ -49,17 +50,12 @@
     cursor: pointer;
 }
 
-/* Show sidebar only on mobile screens */
 @media (max-width: 768px) {
     .sidebarr {
-        width: 200px;  /* Adjust the width for mobile */
-    }
-
-    .sidebarr-menu li {
-        margin: 20px 20px; /* Adjust margin for mobile view */
+        width: 250px;
     }
 
     .sidebarr-menu a {
-        font-size: 16px; /* Slightly smaller font for mobile */
+        font-size: 16px;
     }
 }

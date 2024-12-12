@@ -145,16 +145,22 @@
     }
 }
 
-/* Responsive Design */
+/* Responsive Design for Mobile */
 @media (max-width: 768px) {
+    .carousel-container {
+        height: 400px; /* Fixed height matching your content */
+        overflow-y: hidden; /* Prevent overflow */
+    }
+
     .carousel-track {
-        flex-direction: column;
-        overflow-y: auto;
-        animation: rollTop infinite 12s linear;
+        flex-direction: column; /* Arrange items vertically */
+        animation: rollTop infinite 12s linear; /* Smooth vertical scrolling */
+        height: calc(400px * 5); /* Adjust multiplier based on visible items */
     }
 
     .carousel-item {
-        flex: 1;
+        flex: none; /* Prevent stretching */
+        height: 100px; /* Height of each item */
     }
 }
 
@@ -163,6 +169,6 @@
         transform: translateY(0);
     }
     100% {
-        transform: translateY(-100%);
+        transform: translateY(calc(-100% + 400px)); /* Stop at the end of items */
     }
 }
