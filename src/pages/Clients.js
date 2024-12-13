@@ -10,15 +10,15 @@ const Clients = () => {
                 {/* Refined Stats Section */}
                 <div className="stats-section">
                     <div className="stat-card">
-                        <h3>200M+</h3>
+                        <h3 className="animated-stat">200M+</h3>
                         <p>Facebook Audience</p>
                     </div>
                     <div className="stat-card">
-                        <h3>100M+</h3>
+                        <h3 className="animated-stat">100M+</h3>
                         <p>Instagram Audience</p>
                     </div>
                     <div className="stat-card">
-                        <h3>200+</h3>
+                        <h3 className="animated-stat">200+</h3>
                         <p>Social Media Influencers</p>
                     </div>
                 </div>
@@ -39,16 +39,16 @@ const Clients = () => {
                 <div className="testimonials">
                     <h3>What Our Clients Say</h3>
                     <div className="testimonial-card">
-                        <p>"Vani Media transformed our online presence and boosted our engagement by 200%. Their strategies are spot-on!"</p>
-                        <h4>Client Name - Company</h4>
+                        <p>"Tridev Technologies played a key role in increasing the engagement for our podcast channel. Their strategies helped us reach a larger and more engaged audience, ensuring consistent growth!"</p>
+                        <h4>Piyush Mangtani - The PM Talks</h4>
                     </div>
                     <div className="testimonial-card">
-                        <p>"The creativity and dedication of Vani Media’s team are unmatched. We saw measurable results within the first few months!"</p>
-                        <h4>Client Name - Company</h4>
+                        <p>"We collaborated with Tridev Technologies to manage our election campaign. Their team understood the political landscape and delivered a tailored digital strategy, resulting in a significant increase in voter engagement and support."</p>
+                        <h4>Narrotam Mishra - BJP</h4>
                     </div>
                     <div className="testimonial-card">
-                        <p>"Thanks to their comprehensive digital strategy, our brand's visibility skyrocketed. Truly a pleasure working with them!"</p>
-                        <h4>Client Name - Company</h4>
+                        <p>"Tridev Technologies helped us develop and market our software, as well as lead our team with innovative ideas. Their expertise in digital marketing and tech development made all the difference in achieving our goals."</p>
+                        <h4>Hiteshi Bundela - Ubuddy</h4>
                     </div>
                 </div>
             </div>

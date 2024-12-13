@@ -1,6 +1,11 @@
 import React from 'react';
 import './WhyChoosePage.css'; // Ensure the correct path to the CSS file
 
+// Import images
+import output1 from './Assets/output1.jpg';
+import output2 from './Assets/output2.jpg';
+import output3 from './Assets/output3.jpg';
+
 const WhyChoosePage = () => {
     return (
         <section id="why-choose-tridev" className="why-choose-page">
@@ -41,15 +46,15 @@ const WhyChoosePage = () => {
                 {/* Visual Section */}
                 <div className="visual-section">
                     <div className="visual-item">
-                        <img src="https://www.michiganstateuniversityonline.com/wp-content/uploads/sites/3/2014/03/build-teamwork-culture-41.jpg" alt="Our Team" />
+                        <img src={output1} alt="Empowered Team" />
                         <div className="overlay">Empowered Team</div>
                     </div>
                     <div className="visual-item">
-                        <img src="https://th.bing.com/th/id/OIP.tn3ZFtFprWhSeHcRSvqbiAHaEK?rs=1&pid=ImgDetMain" alt="Client Work" />
+                        <img src={output2} alt="Innovative Projects" />
                         <div className="overlay">Innovative Projects</div>
                     </div>
                     <div className="visual-item">
-                        <img src="https://www.cloudkettle.com/wp-content/uploads/2015/04/Build_MA_Workflow-768x432.png" alt="Our Workflow" />
+                        <img src={output3} alt="Seamless Workflow" />
                         <div className="overlay">Seamless Workflow</div>
                     </div>
                 </div>
