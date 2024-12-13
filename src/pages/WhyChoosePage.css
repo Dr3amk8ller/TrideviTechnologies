@@ -64,45 +64,59 @@
     animation: rotateTrishul 1s infinite linear;
 }
 
-/* Visual Section */
+/* Visual Section - Enhanced */
 .visual-section {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Dynamically adapt columns */
+    gap: 30px; /* Adjust spacing for balance */
     margin-top: 50px;
+    padding: 0 20px; /* Add side padding for alignment */
 }
 
+/* Individual Visual Item */
 .visual-item {
     position: relative;
-    width: 30%;
+    overflow: hidden; /* Keep images within bounds */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #fff;
 }
 
+.visual-item:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Visual Item Image */
 .visual-item img {
     width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
+    height: 230px; /* Fixed height for consistency */
+    border-radius: 15px;
+    object-fit: cover; /* Ensures proper cropping without distortion */
 }
 
-.visual-item img:hover {
-    transform: scale(1.05);
-}
-
+/* Overlay Text */
 .visual-item .overlay {
     position: absolute;
     bottom: 0;
-    background: rgba(255, 87, 34, 0.8);
-    color: white;
-    width: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    color: #fff;
+    padding: 15px;
+    font-size: 1.1em;
     text-align: center;
-    padding: 10px;
-    font-size: 1.2em;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
     transform: translateY(100%);
-    transition: transform 0.3s;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
+/* Hover State */
 .visual-item:hover .overlay {
+    opacity: 1;
     transform: translateY(0);
 }
 
@@ -138,12 +152,20 @@
     }
 
     .visual-section {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr; /* Stack items vertically */
     }
 
     .visual-item {
-        width: 80%;
-        margin-bottom: 20px;
+        width: 90%; /* Take most of the screen width */
+        margin: 0 auto;
+    }
+
+    .visual-item img {
+        height: 200px; /* Slightly reduced height for smaller screens */
+    }
+
+    .visual-item .overlay {
+        font-size: 1em; /* Adjust text size for readability */
+        padding: 10px;
     }
 }

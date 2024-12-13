@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import Sidebarr from './sidebar'; // Import Sidebar component
 import './Navbar.css'; // Import Navbar styles
+import logo from './Assets/trishul-icon.png'; // Import logo
 
 const Navbar = () => {
     const [isHidden, setIsHidden] = useState(false);
@@ -36,6 +37,9 @@ const Navbar = () => {
     return (
         <>
             <nav className={`navbar ${isHidden ? 'hidden' : ''}`}>
+                <div className="navbar-logo">
+                    <img src={logo} alt="Tridev Technology Logo" />
+                </div>
                 <button className="toggle-button" onClick={handleSidebarToggle}>☰</button>
                 <ul className="navbar-menu">
                     <li><ScrollLink to="home" smooth={true} duration={500}>Home</ScrollLink></li>

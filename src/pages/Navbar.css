@@ -20,6 +20,24 @@
     top: -60px;
 }
 
+/* Navbar Logo */
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.navbar-logo img {
+    height: 80px; /* Increased height for a larger logo */
+    width: auto; /* Maintain aspect ratio */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.navbar-logo img:hover {
+    transform: scale(1.1); /* Slight hover effect */
+}
+
 /* Navbar Menu */
 .navbar-menu {
     list-style: none;
@@ -90,6 +108,10 @@ html {
 @media (max-width: 768px) {
     .navbar {
         padding: 10px 20px;
+    }
+
+    .navbar-logo img {
+        height: 60px; /* Adjust logo size for smaller screens */
     }
 
     .navbar-menu {
