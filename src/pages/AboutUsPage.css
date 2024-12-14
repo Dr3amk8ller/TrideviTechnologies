@@ -176,6 +176,54 @@
     }
 }
 
+/* "What We Do" Section Enhancements */
+.enhanced-what-we-do {
+    background: linear-gradient(to bottom right, #fff8e1, #fff8e1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.enhanced-what-we-do:hover {
+    transform: scale(1.02);
+}
+
+/* Icon Grid Styling */
+.what-we-do-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.icon-box {
+    text-align: center;
+    flex: 1 1 150px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.icon-box:hover {
+    transform: scale(1.1);
+}
+
+.icon-box .icon {
+    font-size: 2.5em;
+    color: #d84315;
+    margin-bottom: 10px;
+}
+
+.icon-box span {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+}
+
 /* Keyframes for floating animation */
 @keyframes float {
     0%, 100% {

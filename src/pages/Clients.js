@@ -28,11 +28,7 @@ const Clients = () => {
                     <img src={require('./Assets/TikTok-Logo.png')} alt="TikTok" className="client-logo" />
                     <img src={require('./Assets/Uc-Browser-Logo.jpg')} alt="UC Browser" className="client-logo" />
                     <img src={require('./Assets/ZEE5.png')} alt="Zee5" className="client-logo" />
-                    <img src={require('./Assets/ZEE5.png')} alt="Ubuddy" className="client-logo" />
-                    <img src={require('./Assets/ZEE5.png')} alt="SS Events" className="client-logo" />
-                    <img src={require('./Assets/ZEE5.png')} alt="BJP" className="client-logo" />
-                    <img src={require('./Assets/ZEE5.png')} alt="The PM Talks" className="client-logo" />
-                    <img src={require('./Assets/ZEE5.png')} alt="Other Clients" className="client-logo" />
+                    <img src={require('./Assets/bjp.jpg')} alt="bjp" className="client-logo" />
                 </div>
 
                 {/* Testimonials Section */}

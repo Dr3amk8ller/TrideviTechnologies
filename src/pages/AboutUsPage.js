@@ -1,4 +1,3 @@
-// AboutUsPage.jsx
 import React from 'react';
 import './AboutUsPage.css'; // Ensure this path is correct
 
@@ -8,24 +7,41 @@ const AboutUsPage = () => {
             <div className="about-us-content">
                 <h2>About Tridev Technology</h2>
                 <div className="floating-sections">
-                    <div className="section">
+                    {/* What We Do Section */}
+                    <div className="section enhanced-what-we-do">
                         <h3>What We Do</h3>
                         <p>
                             Empowering Brands through Digital Innovation. Tridev Technology is a digital marketing agency that helps businesses grow and succeed by providing innovative solutions in various aspects of online marketing. We specialize in:
                         </p>
-                        <ul>
-                            <li>Social Media Management</li>
-                            <li>Video Editing</li>
-                            <li>Application/Website Development</li>
-                            <li>Brand Pitching</li>
-                            <li>Sales/Lead Generation</li>
-                        </ul>
+                        <div className="what-we-do-icons">
+                            <div className="icon-box">
+                                <div className="icon">💻</div>
+                                <span>Application/Website Development</span>
+                            </div>
+                            <div className="icon-box">
+                                <div className="icon">📱</div>
+                                <span>Social Media Management</span>
+                            </div>
+                            <div className="icon-box">
+                                <div className="icon">🎥</div>
+                                <span>Video Editing</span>
+                            </div>
+                            <div className="icon-box">
+                                <div className="icon">📣</div>
+                                <span>Brand Pitching</span>
+                            </div>
+                            <div className="icon-box">
+                                <div className="icon">📊</div>
+                                <span>Sales/Lead Generation</span>
+                            </div>
+                        </div>
                         <p>
                             Our goal is to create customized, scalable, and effective digital strategies that help our clients build a strong online presence, engage their audience, and achieve their business objectives.
                         </p>
-                        <a href="#" className="btn-about">Learn More</a>
+                    
                     </div>
 
+                    {/* Who We Are Section */}
                     <div className="section">
                         <h3>Who We Are</h3>
                         <p>
@@ -39,9 +55,10 @@ const AboutUsPage = () => {
                         <p>
                             Our global team is committed to bringing these divine principles to every project, ensuring we craft holistic, sustainable solutions for our clients.
                         </p>
-                        <a href="#" className="btn-about">Meet Our Team</a>
+                       
                     </div>
 
+                    {/* How We Work Section */}
                     <div className="section">
                         <h3>How We Work</h3>
                         <p>
@@ -57,9 +74,10 @@ const AboutUsPage = () => {
                         <p>
                             We continually innovate and adapt to emerging trends, ensuring that your business is always ahead in the competitive digital space.
                         </p>
-                        <a href="#" className="btn-about">Discover How We Work</a>
+                      
                     </div>
 
+                    {/* Our Office Section */}
                     <div className="section">
                         <h3>Our Office</h3>
                         <p>
