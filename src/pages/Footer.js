@@ -12,22 +12,18 @@ const Footer = () => {
 
                 {/* Contact Information */}
                 <div className="footer-contact">
-                    <p>Address: 456 Tech Street, Innovation Hub, India</p>
-                    <p>Phone: +91-9876543210</p>
-                    <p>Email: contact@tridevtech.com</p>
+                    <p>Address: nariman point mahalaxmi nagar, Vridavan Palace Colony, Indore Madhya Pradesh</p>
+                    <p>Phone: +91-9340739809</p>
+                    <p>Email: contact@tridevtechnologies.com</p>
                 </div>
 
                 {/* Social Media Links */}
                 <div className="footer-social">
-                    <a href="http://facebook.com/tridev-tech" className="social-link">
-                        Facebook
-                    </a>
-                    <a href="http://linkedin.com/company/tridev-tech" className="social-link">
+                  
+                    <a href="https://www.linkedin.com/company/tridev-technologies/" className="social-link">
                         LinkedIn
                     </a>
-                    <a href="http://instagram.com/tridev-tech" className="social-link">
-                        Instagram
-                    </a>
+                 
                 </div>
             </div>
             <div className="footer-bottom">

@@ -5,14 +5,13 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */
+    background-color: #fff8e1 !important; /* Updated to desired color */
     padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: top 0.3s ease, background-color 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px); /* Optional: add blur to background */
+    transition: top 0.3s ease;
+    box-shadow: none; /* Remove shadow for transparency */
 }
 
 /* Navbar hidden when scrolling down */
@@ -20,69 +19,33 @@
     top: -60px;
 }
 
-/* Navbar Logo */
-.navbar-logo {
-    display: flex;
-    align-items: center;
-    margin-right: 15px;
-}
-
+/* Logo Styling */
 .navbar-logo img {
-    height: 80px; /* Increased height for a larger logo */
-    width: auto; /* Maintain aspect ratio */
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.navbar-logo img:hover {
-    transform: scale(1.1); /* Slight hover effect */
+    height: 100px; /* Adjust logo size for desktop screens */
+    max-width: 100%; /* Ensure logo doesn't overflow */
 }
 
 /* Navbar Menu */
 .navbar-menu {
-    list-style: none;
-    display: flex;
-    gap: 25px;
+    display: flex; /* Ensure menu items are displayed horizontally */
+    gap: 20px; /* Add spacing between items */
+    list-style: none; /* Remove bullet points */
     margin: 0;
+    padding: 0;
 }
 
-.navbar-menu li {
-    cursor: pointer;
-    position: relative;
-    padding: 5px 0;
-}
-
-/* Navbar Links */
-.navbar-menu a {
-    text-decoration: none;
-    color: #fff; /* White text */
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    position: relative;
+/* Navbar Items */
+.navbar-menu li a {
+    text-decoration: none; /* Remove underline */
+    color: #2d516e; /* Match theme color */
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer; /* Pointer cursor for clickable items */
     transition: color 0.3s ease;
 }
 
-.navbar-menu a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 2px;
-    background-color: #ff5c5c; /* Underline animation color */
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.3s ease-out;
-}
-
-.navbar-menu a:hover {
-    color: #ff5c5c; /* Color change on hover */
-}
-
-.navbar-menu a:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+.navbar-menu li a:hover {
+    color: #000; /* Darker color on hover */
 }
 
 /* Sidebar Button */
@@ -90,53 +53,44 @@
     font-size: 30px;
     background: none;
     border: none;
-    color: #fff;
-    cursor: pointer;
+    color: #2d516e; /* Matches theme for better visibility */
+    cursor: pointer; /* Pointer cursor for clickable elements */
+    position: absolute;
+    top: 15px;
+    right: 45px;
+    z-index: 1100;
     transition: transform 0.3s ease;
+    display: none; /* Hidden on larger screens */
 }
 
 .toggle-button:hover {
     transform: scale(1.1); /* Scale effect on hover */
 }
 
-/* Smooth Scroll Effect */
-html {
-    scroll-behavior: smooth;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
-    .navbar {
-        padding: 10px 20px;
-    }
-
-    .navbar-logo img {
-        height: 60px; /* Adjust logo size for smaller screens */
+    .toggle-button {
+        display: block; /* Show toggle button on smaller screens */
     }
 
     .navbar-menu {
-        display: none;
-        flex-direction: column;
-        gap: 15px;
+        display: none; /* Hide menu by default on mobile */
+        flex-direction: column; /* Vertical alignment for mobile */
+        background-color: #fff8e1; /* Match navbar color */
         position: absolute;
         top: 60px;
         right: 0;
-        background-color: rgba(0, 0, 0, 0.9); /* Darker background for mobile */
-        width: 200px;
-        padding: 20px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add slight shadow */
+    }
+
+    .navbar-menu.open {
+        display: flex; /* Show menu when toggle button is clicked */
     }
 
     .navbar-menu li {
+        text-align: center;
         padding: 10px 0;
-    }
-
-    .toggle-button {
-        color: #fff;
-        font-size: 35px;
-    }
-
-    .toggle-button.open + .navbar-menu {
-        display: flex; /* Display menu when button is clicked */
     }
 }

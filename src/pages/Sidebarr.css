@@ -1,15 +1,15 @@
 .sidebarr {
     position: fixed;
     top: 0;
-    left: -100%; /* Start completely off-screen */
-    width: 200px;
+    left: -100%;
+    width: 250px;
     height: 100%;
     background-color: #0a4570;
     color: #fff;
     transition: left 0.3s ease-in-out;
     z-index: 1000;
     overflow-y: auto;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3); /* Add subtle shadow */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .sidebarr.open {
@@ -51,10 +51,6 @@
 }
 
 @media (max-width: 768px) {
-    .sidebarr {
-        width: 250px;
-    }
-
     .sidebarr-menu a {
         font-size: 16px;
     }

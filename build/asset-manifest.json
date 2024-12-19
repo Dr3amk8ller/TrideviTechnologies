@@ -1,14 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.a12d5495.css",
-    "main.js": "/static/js/main.19f1457f.js",
-    "static/media/your-background-image.png": "/static/media/your-background-image.b783622ddae8c7ca4521.png",
+    "main.css": "/static/css/main.8aef622b.css",
+    "main.js": "/static/js/main.244b5005.js",
+    "static/media/tech1.png": "/static/media/tech1.58b673c38b4db195633d.png",
+    "static/media/tech3.png": "/static/media/tech3.5d9415e0e5878d4c842b.png",
+    "static/media/output1.jpg": "/static/media/output1.9c4a70f745eba1be3064.jpg",
+    "static/media/output3.jpg": "/static/media/output3.03f627654e42b86124b3.jpg",
+    "static/media/output2.jpg": "/static/media/output2.37ce5e3ef5eb4d9e72b0.jpg",
+    "static/media/trishul-icon.png": "/static/media/trishul-icon.b783622ddae8c7ca4521.png",
+    "static/media/bjp.jpg": "/static/media/bjp.1415aaeee2ea41ae602a.jpg",
+    "static/media/ZEE5.png": "/static/media/ZEE5.4323398cb3038c5ba5b7.png",
+    "static/media/Uc-Browser-Logo.jpg": "/static/media/Uc-Browser-Logo.a57e328a553e141d2356.jpg",
+    "static/media/TikTok-Logo.png": "/static/media/TikTok-Logo.d028046815a8d91e6feb.png",
     "index.html": "/index.html",
-    "main.a12d5495.css.map": "/static/css/main.a12d5495.css.map",
-    "main.19f1457f.js.map": "/static/js/main.19f1457f.js.map"
+    "main.8aef622b.css.map": "/static/css/main.8aef622b.css.map",
+    "main.244b5005.js.map": "/static/js/main.244b5005.js.map"
   },
   "entrypoints": [
-    "static/css/main.a12d5495.css",
-    "static/js/main.19f1457f.js"
+    "static/css/main.8aef622b.css",
+    "static/js/main.244b5005.js"
   ]
 }
